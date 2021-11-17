@@ -16,17 +16,9 @@
 
     <script>
       $(function () {
-        let url = 'https://obscure-escarpment-22459.herokuapp.com/api';
-        $.ajax({
-          type: 'get',
-          url,
-          dataType: 'json',
-          success: function (data) {
-            console.log(data);
-          },
-          error: function (err) {
-            console.log(err.responseText);
-          },
+        const socket = io('https://obscure-escarpment-22459.herokuapp.com/');
+        io.on('message', msg => {
+          alert(msg);
         });
       });
     </script>

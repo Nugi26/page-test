@@ -16,7 +16,8 @@
 
     <script>
       $(function () {
-        const socket = io('https://obscure-escarpment-22459.herokuapp.com/');
+        // const socket = io('https://obscure-escarpment-22459.herokuapp.com/');
+        const socket = io('https://7d98-139-193-2-96.ngrok.io');
         socket.on('message', msg => {
           alert(msg);
         });
